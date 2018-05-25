@@ -1,0 +1,90 @@
+<%- include( './head' ) %>
+
+<section class="home">
+
+	<div class="show">
+	<h1 class="show normal">
+		<div><div>Front End Developer</div></div>
+		<div><div>Servin Nissen</div></div>
+	</h1>
+	<p>Hey ik ben Servin, een Front End Developer uit Alkmaar. Met een passie/obsessie voor code en mooie animaties. Vind hier wat van mijn school werk en vrije tijds geklooi.</p>
+	</div>
+	<article class="small">
+	<h1>
+		<div><div><%= project.fullTitle[ 0 ] %></div></div>
+		<div><div><%= project.fullTitle[ 1 ] %></div></div>
+	</h1>
+	<h2>Doel:</h2>
+	<%- project.text %>
+
+	<% if ( project.design ) { %>
+		<h2>Design:</h2>
+		<a class="btn dribbble" href="<%= project.design %>">
+			<img src="../img/dribbble-ball.svg" alt="Dribbble">
+			Dribbble
+		</a>
+	<% } %>
+
+	<% if ( project.tools ) { %>
+
+		<h2>Tools:</h2>
+		<div class="tools">
+
+		<% project.tools.forEach( function( el ) { %>
+
+			<figure data-name="<%= el.title %>">
+				<img src="/img/icons<%= el.img %>" alt="<%= el.title %>" >
+			</figure>
+
+		<% } ) %>
+
+		</div>
+
+	<% } %>
+
+	<% if ( project.original ) { %>
+		<h2>Origineel:</h2>
+		<a class="btn <%= project.original.class %>" href="<%= project.original.link %>">
+			<img src="<%= project.original.img %>" alt="<%= project.original.title %>">
+			<%= project.original.title %>
+		</a>
+	<% } %>
+
+	<% if ( project.projectLink ) { %>
+		<h2>Visite the website
+			<% if ( project.attention ) { %>
+				<div class='let-op'>
+					<span>!</span>
+					<%- project.attention %>
+				</div>
+			<% } %>
+		</h2>
+		<a class="btn" href="<%= project.projectLink %>" target="_blank"><%= project.title %></a>
+	<% } %>
+
+	<% if ( project.viewThis ) { %>
+	<footer>
+		<p>View THIS project on:</p>
+		<div>
+			<% project.viewThis.forEach( function( el ) { %>
+				<a class="btn <%= el.title %>" href="<%= el.link %>"><img src="<%= el.img %>" alt="<%= el.title %>"><%= el.title %></a>
+			<% } ) %>
+		</div>
+	</footer>
+	<% } %>
+	</article>
+
+</section>
+<section class="home">
+	<a href="/" class="close"></a>
+	<a>
+	<header>
+		<span></span>
+		<span></span>
+		<span></span>
+	</header>
+	<img src="/img/<%= project.image %>-l.jpg" alt="<%= project.title %>">
+	</a>
+</section>
+
+<%- include( './footer' ) %>

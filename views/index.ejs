@@ -1,0 +1,35 @@
+<%- include( './head' ) %>
+
+<section class="home">
+	<div>
+		<nav>
+			<ul>
+				<li><a href="/about-me">About me</a></li>
+			</ul>
+		</nav>
+		<h1>
+			<div><div>Front End Developer</div></div>
+			<div><div>Servin Nissen</div></div>
+		</h1>
+		<p>Hi I am Servin Nissen, a Front End Developer from the Netherlands. With a passion/hobby
+for code and nice animations. Here you will find some of my school work and stuff I made in my free time.</p>
+	</div>
+</section>
+
+<section class="home">
+
+	<% projects.forEach( function( el ) { %>
+
+		<a class="work" href="/projects/<%= el.link %>">
+			<img src="/img/<%= el.image %>-s.jpg" alt="<%= el.title %>">
+			<div class="hover">
+				<p><%= el.title %>
+				<span><%= el.tag %></span></p>
+			</div>
+		</a>
+
+	<% } ) %>
+
+</section>
+
+<%- include( './footer' ) %>

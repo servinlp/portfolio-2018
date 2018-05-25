@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl" class="nojs">
+  <head>
+    <title>VR Maze | Portfolio van Servin Nissen, Front End Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Hey ik ben Servin, een Front End Developer uit Alkmaar. Met een passie/obsessie voor code en mooie animaties." />
+    <meta property="og:title" content="Portfolio van Servin Nissen, Front End Developer" />
+    <meta property="og:description" content="Hey ik ben Servin, een Front End Developer uit Alkmaar. Met een passie/obsessie voor code en mooie animaties." />
+    <meta property="og:image" content="../android-chrome-192x192.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../style.min.css">
+    <script>document.documentElement.classList.remove("nojs")</script>
+  </head>
+  <body class="sub">
+    <section class="home">
+      <div class="show">
+        <h1 class="show normal">
+          <div><div>Front End Developer</div></div>
+          <div><div>Servin Nissen</div></div>
+        </h1>
+        <p>Hey ik ben Servin, een Front End Developer uit Alkmaar. Met een passie/obsessie voor code en mooie animaties. Vind hier wat van mijn school werk en vrije tijds geklooi.</p>
+      </div>
+      <article class="small">
+        <h1>
+          <div><div>Web VR</div></div>
+          <div><div>Doolhof</div></div>
+        </h1>
+        <h2>Doel:</h2>
+        <p>Een 3D wereld creëren met behulp van de library Three.js waarin een doolhof gegenereerd word aan de hand van een simpele string. Dit gegenereerde doolhof vervolgens ombouwen zodat je hier met een VR headset en controllers doorheen kan lopen. (Kijken en lopen werkt met de Htc Vive. Ocules kan nog alleen rond kijken.)</p>
+        <!-- <h2>Code snippet</h2> -->
+        <code is="fancy-code">
+          <div data-lang="js">
+            ...
+            maze:
+              "| 1---------5---------2" +
+              "| |         |         |" +
+              "| | | 1---2 4-2 | 1-2 |" +
+              "|   | |   |   | | | | |" +
+              "8---6 | | 4-2 4-3 | | |" +
+              "|   | | |   |     |   |" +
+              "| | | 8-7-- 4-----6 --6" +
+              "| |   |           |   |" +
+              "| 8---3 --2 1---2 8-- |" +
+              "| |       | |   | |   |" +
+              "| | --5-- | | | 4-6 1-6" +
+              "| |   |   | | |   | | |" +
+              "| 4-2 | 1-7-6 4-2 | | |" +
+              "|   | | |   |   | | | |" +
+              "8-- | | | | 8-- | | | |" +
+              "|   | | | | |   | | | |" +
+              "| 1-3 | | | | --6 | | |" +
+              "| |   |   |     |     |" +
+              "4-7-- 4---7-----7-----3",
+
+            render: function() {
+              for (var i = 0; i < this.total(); i++) {
+                this.wall(this.maze[i], i);
+              }
+            },
+            ...
+          </div>
+        </code>
+        <h2>Tools:</h2>
+        <div class="tools">
+          <figure data-name="Three.js">
+            <img src="../img/icons/threejs/threejs-original.svg" alt="Three.js">
+          </figure>
+        </div>
+        <h2>Bezoek de website
+        <div class="let-op"><span>!</span>
+          <p>Om deze website goed te kunnen bekijken is een Htc Vive of Oculus Rift nodig met browser die Web VR ondersteund. Ga hiervoor naar <a href="https://mozvr.com/">https://mozvr.com/</a>.</p>
+        </div></h2>
+        <a class="btn" href="../project/maze-vr/index.html" target="_blank">Het doolhof</a>
+        <footer>
+          <p>View THIS project on</p>
+          <div>
+            <a class="btn github" href="https://github.com/servinlp/maze-vr"><img src="../img/github-original.svg" alt="Github">github</a>
+          </div>
+        </footer>
+      </article>
+    </section>
+    <section class="home">
+      <a href="../index.html" class="close"></a>
+      <a>
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+        <img src="../img/maze-l.jpg" alt="Maze">
+      </a>
+    </section>
+
+
+    <script src="../script.min.js"></script>
+  </body>
+</html>
